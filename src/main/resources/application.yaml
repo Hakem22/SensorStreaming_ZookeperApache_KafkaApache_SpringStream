@@ -1,0 +1,15 @@
+server:
+    port: 8090
+spring:
+    cloud:
+        stream:
+            kafka:
+                binder:
+                    brokers: localhost:9092
+            bindings:
+                data-in:
+                    destination: data
+                    contentType: application/json
+                data-out:
+                    destination: data
+                    contentType: application/json
